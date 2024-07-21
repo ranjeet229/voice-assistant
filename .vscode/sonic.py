@@ -4,7 +4,6 @@ import pywhatkit as kit
 import wikipedia
 from datetime import datetime
 
-# Initialize the recognizer and the engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
@@ -41,7 +40,7 @@ def process_command(command):
         kit.search(query)
         stop_listening = True
     elif 'hey buddy' in command:
-        speak('Hello')
+        speak('Hello , Amigo')
     elif 'who is' in command:
         query = command.replace('who is', '').strip()
         summary = wikipedia.summary(query, sentences=1)
